@@ -1,6 +1,6 @@
 ﻿using Ninject.MockingKernel.Moq;
 
-namespace thebigword.TestFramework.Syntax
+namespace TestFramework.NUnit.Ninject.Moq.Syntax
 {
     public class SetMockBuilder<TMock>
     {

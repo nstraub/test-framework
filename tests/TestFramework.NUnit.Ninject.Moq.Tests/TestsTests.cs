@@ -2,7 +2,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace thebigword.TestFramework.Tests
+namespace TestFramework.NUnit.Ninject.Moq.Tests
 {
     [TestFixture]
     public class TestsTests : Tests<Service>

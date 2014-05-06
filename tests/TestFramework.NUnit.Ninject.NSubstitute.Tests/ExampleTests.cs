@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace thebigword.TestFramework.NSubstitute.Tests
+namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
 {
     [TestFixture]
     public class ExampleTests : Tests<Service>

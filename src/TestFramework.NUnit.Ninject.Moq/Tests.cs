@@ -3,10 +3,9 @@ using Moq;
 using Ninject;
 using Ninject.MockingKernel.Moq;
 using NUnit.Framework;
+using TestFramework.NUnit.Ninject.Moq.Syntax;
 
-using thebigword.TestFramework.Syntax;
-
-namespace thebigword.TestFramework
+namespace TestFramework.NUnit.Ninject.Moq
 {
     /// <summary>
     /// A base type for units tests.  Provides an auto mocking container. 

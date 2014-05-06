@@ -1,6 +1,6 @@
 ﻿using Ninject.MockingKernel.NSubstitute;
 
-namespace thebigword.TestFramework.NSubstitute.Syntax
+namespace TestFramework.NUnit.Ninject.NSubstitute.Syntax
 {
     public class SetSubstituteBuilder<TSubstitute>
     {

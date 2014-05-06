@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace thebigword.TestFramework.NSubstitute.Tests
+namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
 {
     public class Service
     {

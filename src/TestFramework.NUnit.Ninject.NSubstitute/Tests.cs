@@ -1,9 +1,9 @@
 ﻿using Ninject;
 using Ninject.MockingKernel.NSubstitute;
 using NUnit.Framework;
-using thebigword.TestFramework.NSubstitute.Syntax;
+using TestFramework.NUnit.Ninject.NSubstitute.Syntax;
 
-namespace thebigword.TestFramework.NSubstitute
+namespace TestFramework.NUnit.Ninject.NSubstitute
 {
     /// <summary>
     /// A base type for units tests.  Provides an auto mocking container. 
