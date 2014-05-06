@@ -16,6 +16,11 @@ namespace TestFramework.NUnit.Ninject.Moq
         private MoqMockingKernel kernel;
 
         /// <summary>
+        /// Starts the process of setting up a mock in the auto mocking container.
+        /// </summary>
+        protected SetMockSyntax Set { get { return new SetMockSyntax(kernel); } }
+
+        /// <summary>
         /// Sets up a fresh auto mocking container before each test is run.
         /// </summary>
         [SetUp]
@@ -38,16 +43,6 @@ namespace TestFramework.NUnit.Ninject.Moq
         protected T GetService()
         {
             return kernel.Get<T>();
-        }
-
-        /// <summary>
-        /// Sets the specified type to a specific instance in the auto mocking container.
-        /// </summary>
-        /// <typeparam name="TMock">The type to set.</typeparam>
-        /// <returns></returns>
-        protected SetMockBuilder<TMock> SetMock<TMock>()
-        {
-            return new SetMockBuilder<TMock>(kernel);
         }
 
         /// <summary>

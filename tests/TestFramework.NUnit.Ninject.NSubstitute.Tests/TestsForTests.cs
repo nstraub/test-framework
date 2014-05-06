@@ -12,7 +12,7 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
         public void Example_constructor_test()
         {
             // Arrange
-            SetSubstituteFor<IFooService>().ToNull();
+            Set.SubstituteFor<IFooService>().ToNull();
 
             // Act
             Action act = () => GetService();

@@ -63,6 +63,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Syntax\SetSubstituteBuilder.cs" />
+    <Compile Include="Syntax\SetSubstituteSyntax.cs" />
     <Compile Include="TestsFor.cs" />
   </ItemGroup>
   <ItemGroup>
