@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
 {
     [TestFixture]
-    public class ExampleTests : Tests<Service>
+    public class TestsForTests : TestsFor<Service>
     {
         [Test]
         public void Example_constructor_test()

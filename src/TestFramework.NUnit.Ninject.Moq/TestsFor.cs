@@ -11,7 +11,7 @@ namespace TestFramework.NUnit.Ninject.Moq
     /// A base type for units tests.  Provides an auto mocking container. 
     /// </summary>
     /// <typeparam name="T">The class to test.</typeparam>
-    public abstract class Tests<T> where T : class
+    public abstract class TestsFor<T> where T : class
     {
         private MoqMockingKernel kernel;
 

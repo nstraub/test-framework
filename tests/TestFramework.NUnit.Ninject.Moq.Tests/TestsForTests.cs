@@ -5,7 +5,7 @@ using NUnit.Framework;
 namespace TestFramework.NUnit.Ninject.Moq.Tests
 {
     [TestFixture]
-    public class TestsTests : Tests<Service>
+    public class TestsForTests : TestsFor<Service>
     {
         [Test]
         public void AddInstance_adds_instances_to_auto_mocking_container()
