@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <title>Test Framework for NUnit, Ninject and NSubstitute</title>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Test framework abstracts the boilerplate required to use an auto mocking container in a unit test project.</description>
+    <copyright>Copyright Kevin Kuszyk 2014</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/kevinkuszyk/test-framework/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/kevinkuszyk/test-framework</projectUrl>
+    <tags>NUnit Ninject NSubstitute TDD BDD Fluent Testing</tags>
+  </metadata>
+</package>

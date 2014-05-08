@@ -15,6 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Moq", "Moq", "{915D92A7-D56
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NSubstitute", "NSubstitute", "{CF2647F0-6F54-4831-8353-949A9F51C080}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuspecs", ".nuspecs", "{FB7ED9C3-1FAC-46D5-8939-57ABC1D5ECDB}"
+	ProjectSection(SolutionItems) = preProject
+		src\TestFramework.NUnit.Ninject.Moq\TestFramework.NUnit.Ninject.Moq.nuspec = src\TestFramework.NUnit.Ninject.Moq\TestFramework.NUnit.Ninject.Moq.nuspec
+		src\TestFramework.NUnit.Ninject.NSubstitute\TestFramework.NUnit.Ninject.NSubstitute.nuspec = src\TestFramework.NUnit.Ninject.NSubstitute\TestFramework.NUnit.Ninject.NSubstitute.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
