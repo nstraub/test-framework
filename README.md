@@ -6,7 +6,7 @@ The test framework abstracts the boilerplate required to use an auto mocking con
 Why
 ===
 
-Without the test framework or auto mocking unit tests can easily become brittle and and tiresome to maintain.  In this example every time a dependency is added to the service, we have to refactor it into all out existing tests before we can start writing new code.
+Without the test framework or auto mocking unit tests can easily become brittle and and tiresome to maintain.  In this example every time a dependency is added to the service, we have to refactor it into all our existing tests before we can start writing new code.
 
 ``` c#
 [Test]
@@ -53,7 +53,7 @@ Documentation
 Credits
 =======
 
-The initial version of the framework was witten for [thebigword](http://www.thebigword.com).  Thank you to them and @a-h for agreeing to open source it.
+The initial version of the framework was witten for [thebigword](http://www.thebigword.com).  Thank you to them and [@a-h](https://github.com/a-h) for agreeing to open source it.
 
 Continuous Integration
 ======================
