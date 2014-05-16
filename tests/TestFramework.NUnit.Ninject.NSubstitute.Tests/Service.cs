@@ -23,17 +23,11 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
         {
             return fooService.DoFoo();
         }
-
-        public async Task<string> DoFooAsync()
-        {
-            return await fooService.DoFooAsync();
-        }
     }
 
     public interface IFooService
     {
         string DoFoo();
-        Task<string> DoFooAsync();
     }
 
     public interface IBarService
