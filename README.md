@@ -3,8 +3,8 @@ Test Framework
 
 The test framework abstracts the boilerplate required to use an auto mocking container in a unit test project.  This means your test classes can focus on the job at hand, whilst all the setup and management of the auto mocking container is handled elsewhere.
 
-Why
-===
+Why?
+====
 
 Without the test framework or auto mocking unit tests can easily become brittle and and tiresome to maintain.  In this example every time a dependency is added to the service, we have to refactor it into all our existing tests before we can start writing new code.
 
@@ -45,10 +45,25 @@ public void DoWork_robust_test()
 }
 ```
 
+Installing
+==========
+
+Please install the appropiate package from NuGet:
+
+````
+PM> Install-Package TestFramework.NUnit.Ninject.Moq -Pre
+````
+
+or
+
+````
+PM> Install-Package TestFramework.NUnit.Ninject.NSubstitute -Pre
+````
+
 Documentation
 =============
 
-// TODO
+Please see the [wiki](https://github.com/kevinkuszyk/test-framework/wiki).
 
 Credits
 =======
@@ -58,4 +73,4 @@ The initial version of the framework was witten for [thebigword](http://www.theb
 Continuous Integration
 ======================
 
-//TODO
+// TODO
