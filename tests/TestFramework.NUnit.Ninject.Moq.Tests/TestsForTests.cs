@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using FluentAssertions;
+using Moq;
 using NUnit.Framework;
 
 namespace TestFramework.NUnit.Ninject.Moq.Tests
@@ -26,7 +27,18 @@ namespace TestFramework.NUnit.Ninject.Moq.Tests
             instances.Should().Contain(class1);
             instances.Should().Contain(class2);
         }
-                
+
+        [Test]
+        public void Default_mock_behaviour_is_loaded_from_static_config_class()
+        {
+            // Arrange
+            
+            // Act
+            var mock = GetMock<IInterface>();
+
+            // Assert
+            mock.Behavior.Should().Be(MockBehavior.Default);
+        }
     }
 
     public class Service { }

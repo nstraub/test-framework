@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Moq;
 using Ninject;
 using Ninject.MockingKernel.Moq;
 using NUnit.Framework;
+using TestFramework.NUnit.Ninject.Moq.Extensions;
 using TestFramework.NUnit.Ninject.Moq.Syntax;
 
 namespace TestFramework.NUnit.Ninject.Moq
@@ -26,6 +29,11 @@ namespace TestFramework.NUnit.Ninject.Moq
         [SetUp]
         public void SetUpKernel()
         {
+            if (!TestFrameworkConfiguration.UserSetupLoaded)
+            {
+                LoadUserSetup();    
+            }
+            
             var settings = new NinjectSettings
             {
                 AllowNullInjection = true
@@ -33,7 +41,23 @@ namespace TestFramework.NUnit.Ninject.Moq
 
             kernel = new MoqMockingKernel(settings);
 
-            kernel.Settings.SetMockBehavior(MockBehavior.Strict);
+            kernel.Settings.SetMockBehavior(TestFrameworkConfiguration.DefaultMockBehavior);
+        }
+
+        private void LoadUserSetup()
+        {
+            TestFrameworkConfiguration.UserSetupLoaded = true;
+
+            var interfaceName = typeof(ITestFrameworkSetup).Name;
+            
+            var types = GetType().Assembly.GetLoadableTypes()
+                                          .Where(type => type.IsClass && type.GetInterface(interfaceName) != null);
+            
+            foreach (var type in types)
+            {
+                var instance = (ITestFrameworkSetup) Activator.CreateInstance(type);
+                instance.Setup();
+            }
         }
 
         /// <summary>
