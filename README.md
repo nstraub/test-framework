@@ -73,4 +73,5 @@ The initial version of the framework was witten for [thebigword](http://www.theb
 Continuous Integration
 ======================
 
-// TODO
+[![Build status](https://ci.appveyor.com/api/projects/status/ift4cef3mhf6tcc7)](https://ci.appveyor.com/project/kevinkuszyk/test-framework)
+
