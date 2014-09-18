@@ -51,13 +51,13 @@ Installing
 Please install the appropiate package from NuGet:
 
 ````
-PM> Install-Package TestFramework.NUnit.Ninject.Moq -Pre
+PM> Install-Package TestFramework.NUnit.Ninject.Moq
 ````
 
 or
 
 ````
-PM> Install-Package TestFramework.NUnit.Ninject.NSubstitute -Pre
+PM> Install-Package TestFramework.NUnit.Ninject.NSubstitute
 ````
 
 Documentation
