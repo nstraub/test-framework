@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 
 namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
 {
@@ -23,11 +22,6 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
         {
             return fooService.DoFoo();
         }
-    }
-
-    public interface IFooService
-    {
-        string DoFoo();
     }
 
     public interface IBarService

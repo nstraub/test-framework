@@ -37,5 +37,18 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
             // Assert
             actual.Should().Be(expected);
         }
+
+        [Test]
+        public void Set_substitute_to_type_configures_kernel()
+        {
+            // Arrange
+            Set.SubstituteFor<IFooService>().To<FooService>();
+
+            // Act
+            var substitute = SubstituteFor<IFooService>();
+
+            // Assert
+            substitute.Should().BeOfType<FooService>();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Ninject.MockingKernel.NSubstitute;
+﻿using Ninject;
+using Ninject.MockingKernel.NSubstitute;
 
 namespace TestFramework.NUnit.Ninject.NSubstitute.Syntax
 {
@@ -29,5 +30,13 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Syntax
             To(instance);
         }
 
+        /// <summary>
+        /// Sets the substitute object to an instance of the specified type in the auto mocking container.
+        /// </summary>
+        /// <typeparam name="TConcrete">The type to use.</typeparam>
+        public void To<TConcrete>() where TConcrete: TSubstitute
+        {
+            kernel.Bind<TSubstitute>().To<TConcrete>();
+        }
     }
 }
