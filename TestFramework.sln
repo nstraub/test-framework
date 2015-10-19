@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework.NUnit.Ninject.Moq", "src\TestFramework.NUnit.Ninject.Moq\TestFramework.NUnit.Ninject.Moq.csproj", "{3D1620F9-1BAF-4FD9-A3EC-03021BDE4FC7}"
 EndProject
