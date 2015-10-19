@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Test framework abstracts the boilerplate required to use an auto mocking container in a unit test project.</description>
     <releaseNotes>See https://github.com/kevinkuszyk/test-framework/releases</releaseNotes>
-    <copyright>Copyright Kevin Kuszyk 2014</copyright>
+    <copyright>Copyright Kevin Kuszyk 2015</copyright>
     <licenseUrl>https://raw.githubusercontent.com/kevinkuszyk/test-framework/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/kevinkuszyk/test-framework</projectUrl>
     <tags>NUnit Ninject NSubstitute TDD BDD Fluent Testing</tags>
