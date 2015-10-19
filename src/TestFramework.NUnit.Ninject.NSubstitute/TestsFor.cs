@@ -1,4 +1,5 @@
-﻿using Ninject;
+﻿using System;
+using Ninject;
 using Ninject.MockingKernel.NSubstitute;
 using NUnit.Framework;
 using TestFramework.NUnit.Ninject.NSubstitute.Syntax;
@@ -19,6 +20,11 @@ namespace TestFramework.NUnit.Ninject.NSubstitute
         protected SetSubstituteSyntax Set { get { return new SetSubstituteSyntax(kernel); } }
 
         /// <summary>
+        /// Gets the class to test.
+        /// </summary>
+        protected T Subject => kernel.Get<T>();
+
+        /// <summary>
         /// Sets up a fresh auto mocking container before each test is run.
         /// </summary>
         [SetUp]
@@ -36,9 +42,19 @@ namespace TestFramework.NUnit.Ninject.NSubstitute
         /// Gets the service / class to test.
         /// </summary>
         /// <returns></returns>
+        [Obsolete("Use the Subject property or GetSubject() method instead.")]
         protected T GetService()
         {
-            return kernel.Get<T>();
+            return Subject;
+        }
+
+        /// <summary>
+        /// Gets the class to test.
+        /// </summary>
+        /// <returns></returns>
+        protected T GetSubject()
+        {
+            return Subject;
         }
 
         /// <summary>

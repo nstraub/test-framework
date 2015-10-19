@@ -15,7 +15,7 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
             Set.SubstituteFor<IFooService>().ToNull();
 
             // Act
-            Action act = () => GetService();
+            Action act = () => GetSubject();
 
             // Assert
             act.ShouldThrow<ArgumentNullException>().And.ParamName.Should().Be("fooService");
@@ -25,14 +25,13 @@ namespace TestFramework.NUnit.Ninject.NSubstitute.Tests
         public void Example_setup_test()
         {
             // Arrange
-            var service = GetService();
             var expected = "expected result";
 
             SubstituteFor<IFooService>().DoFoo()
                                         .Returns(expected);
 
             // Act
-            var actual = service.DoFoo();
+            var actual = Subject.DoFoo();
 
             // Assert
             actual.Should().Be(expected);

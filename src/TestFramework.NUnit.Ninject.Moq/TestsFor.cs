@@ -24,6 +24,11 @@ namespace TestFramework.NUnit.Ninject.Moq
         protected SetMockSyntax Set { get { return new SetMockSyntax(kernel); } }
 
         /// <summary>
+        /// Gets the class to test.
+        /// </summary>
+        protected T Subject => kernel.Get<T>();
+
+        /// <summary>
         /// Sets up a fresh auto mocking container before each test is run.
         /// </summary>
         [SetUp]
@@ -64,9 +69,19 @@ namespace TestFramework.NUnit.Ninject.Moq
         /// Gets the service / class to test.
         /// </summary>
         /// <returns></returns>
+        [Obsolete("Use the Subject property or GetSubject() method instead.")]
         protected T GetService()
         {
-            return kernel.Get<T>();
+            return Subject;
+        }
+
+        /// <summary>
+        /// Gets the class to test.
+        /// </summary>
+        /// <returns></returns>
+        protected T GetSubject()
+        {
+            return Subject;
         }
 
         /// <summary>
