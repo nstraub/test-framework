@@ -20,7 +20,7 @@ namespace TestFramework.NUnit.Ninject.NSubstitute
         protected SetSubstituteSyntax Set { get { return new SetSubstituteSyntax(kernel); } }
 
         /// <summary>
-        /// Gets the class to test.
+        /// Gets an instance of the class to test from the auto mocking container.
         /// </summary>
         protected T Subject => kernel.Get<T>();
 
@@ -49,7 +49,7 @@ namespace TestFramework.NUnit.Ninject.NSubstitute
         }
 
         /// <summary>
-        /// Gets the class to test.
+        ///  Gets an instance of the class to test from the auto mocking container.
         /// </summary>
         /// <returns></returns>
         protected T GetSubject()
