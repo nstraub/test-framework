@@ -24,7 +24,7 @@ namespace TestFramework.NUnit.Ninject.Moq
         protected SetMockSyntax Set { get { return new SetMockSyntax(kernel); } }
 
         /// <summary>
-        /// Gets the class to test.
+        /// Gets an instance of the class to test from the auto mocking container.
         /// </summary>
         protected T Subject => kernel.Get<T>();
 
@@ -76,7 +76,7 @@ namespace TestFramework.NUnit.Ninject.Moq
         }
 
         /// <summary>
-        /// Gets the class to test.
+        /// Gets an instance of the class to test from the auto mocking container.
         /// </summary>
         /// <returns></returns>
         protected T GetSubject()
