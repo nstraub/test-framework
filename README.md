@@ -6,7 +6,7 @@ The test framework abstracts the boilerplate required to use an auto mocking con
 Why?
 ====
 
-Without the test framework or auto mocking unit tests can easily become brittle and and tiresome to maintain.  In this example every time a dependency is added to the service, we have to refactor it into all our existing tests before we can start writing new code.
+Without the test framework or auto mocking, unit tests can easily become brittle and tiresome to maintain.  In this example every time a dependency is added to the service, we have to refactor it into all our existing tests before we can start writing new code.
 
 ``` c#
 [Test]
@@ -26,7 +26,7 @@ public void DoWork_brittle_test()
     actual.Should().Be(expected);
 }
 ```  
-In this version we use the test framework to instantiate the class we are testing.  The `GetService()` method simply wraps the auto mocking container, thus isolating your test class from it.
+In this version we use the test framework to instantiate the class we are testing.  The `GetService()` method simply wraps the auto mocking container, thus isolating our test class from it.
 
 ``` c#
 [Test]
