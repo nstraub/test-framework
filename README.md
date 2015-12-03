@@ -26,19 +26,18 @@ public void DoWork_brittle_test()
     actual.Should().Be(expected);
 }
 ```  
-In this version we use the test framework to instantiate the class we are testing.  The `GetService()` method simply wraps the auto mocking container, thus isolating our test class from it.
+In this version we use the test framework to instantiate the class we are testing.  The `Subject` property gets the class we are testing from the auto mocking container, thus isolating our test class from it.
 
 ``` c#
 [Test]
 public void DoWork_robust_test()
 {
     // Arrange
-    var service = GetService();
     var input = "foo";
     var expected = "bar";
 
     // Act
-    var actual = service.DoWork(input);
+    var actual = Subject.DoWork(input);
 
     // Assert
     actual.Should().Be(expected);
